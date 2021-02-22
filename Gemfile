@@ -59,3 +59,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
    gem 'rspec-rails', '~> 4.0.0.beta3'
    gem 'rails-controller-testing'
  end
+gem 'bootstrap-sass'
