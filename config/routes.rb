@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-  get 'welcome/about'
+  resources :posts
+  ## line 5 was previously -- get "welcome/about"
+  ##This allows users to visit /about rather than /welcome/about
+  get 'about' => 'welcome#about'
 
   root 'welcome#index'
  
