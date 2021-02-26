@@ -15,6 +15,8 @@ class UsersController < ApplicationController
     if @user.save
       p "user has saved!"
       flash[:notice] = "Welcome to Bloccit #{@user.name}!"
+      create_session(@user)
+
       redirect_to root_path
     else
       flash.now[:alert] = "There was an error creating your account. Please try again."
