@@ -3,6 +3,7 @@ class User < ApplicationRecord
   before_save { self.email = email.downcase if email.present? }
 
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
    
     
     validates :name, length: { minimum: 1, maximum: 100 }, presence: true
